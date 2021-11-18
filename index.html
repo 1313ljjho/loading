@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+	#bg{
+		width: 1200px;
+		height: 600px;
+		text-align: center;
+		margin-top: 90px;
+		
+		background: url(res/bg.png) no-repeat;
+		background-size: contain;
+		background-position: center;
+		position: relative;
+	}	
+		
+	#bar{
+		margin: auto;
+		position: absolute;
+		left: 370px;
+		top: 515px;
+		}	
+	</style>
+    <title>加载</title>
+</head>
+<body>
+	<div id="bg"></div>
+	<div id="bar">
+		<img id="bar2" src="res/bar2.png" width="30px" height="12px">
+	</div>
+</body>
+
+<script type="text/javascript">
+	window.onload = move;
+	var width=0;
+
+	function move(){
+		document.getElementById("bar2").style.width=width+"px";
+		width+=15;
+	}
+	
+	window.requestAnimationFrame(move);
+
+</script>
+
+</html>
+
